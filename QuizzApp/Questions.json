@@ -1,0 +1,39 @@
+﻿{
+  "Questions": "All Our Questions",
+  "Generald Knowledge": [
+    {
+      "Question": "",
+      "Correct answer": "",
+      "Incorrect1": "",
+      "Incorrect2": "",
+      "Incorrect3": ""
+    }
+  ],
+  "Animals": [
+    {
+      "Question": "",
+      "Correct answer": "",
+      "Incorrect1": "",
+      "Incorrect2": "",
+      "Incorrect3": ""
+    }
+  ],
+  "Films": [
+    {
+      "Question": "",
+      "Correct answer": "",
+      "Incorrect1": "",
+      "Incorrect2": "",
+      "Incorrect3": ""
+    }
+  ],
+  "Music": [
+    {
+      "Question": "",
+      "Correct answer": "",
+      "Incorrect1": "",
+      "Incorrect2": "",
+      "Incorrect3": ""
+    }
+  ]
+}
