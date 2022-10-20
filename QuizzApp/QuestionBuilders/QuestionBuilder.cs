@@ -1,72 +1,122 @@
 ﻿using Newtonsoft.Json;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar;
 
 namespace QuizzApp.QuestionBuilders
 {
     internal class QuestionBuilder
     {
-        public string Question { get; set; }
-        public string CorrectAnswer { get; set; }
-        public string Incorrect1 { get; set; }
-        public string Incorrect2 { get; set; }
-        public string Incorrect3 { get; set; }
+        //IMPORTANT - Please make sure to Copy and Paste the JSON file into your /bin/Debug/net6.0-windows Folder before running the program
+        //ALL QUESTIONS (Members) MUST HAVE THE SAME PROPERTIES AND MUST HAVE A COMMA AT THE END OF EACH ENTRY NEXT TO THE CURLY BRACKETS
+        //Look at the General Knowledge section of the JSON for an example of how you need to add your questions
 
-        public QuestionBuilder() 
+
+        public string? Question { get; set; } //Initialising main variables
+        public string? CorrectAnswer { get; set; }
+        public string? Incorrect1 { get; set; }
+        public string? Incorrect2 { get; set; }
+        public string? Incorrect3 { get; set; }
+
+        public QuestionBuilder(string QuestionType) //There is more than 1 category so we need an input
         {
-            using (StreamReader sr = new StreamReader("Questions.json"))
+            try 
             {
-                string json = sr.ReadToEnd();
-                JSONObject obj = JsonConvert.DeserializeObject<JSONObject>(json);
+                using (StreamReader sr = new StreamReader("Questions.json")) //Open the JSON file
+                {
+                    string json = sr.ReadToEnd();
+                    JSONObject obj = JsonConvert.DeserializeObject<JSONObject>(json); //Filters it out into its different properties
 
-                var random = new Random();
-                var dataGeneralKnowledge = obj.GeneralKnowledge[random.Next(0, obj.GeneralKnowledge.Length)];
+                    Random random = new Random(); //Generating the questions at random
+
+                    if (QuestionType == "General")
+                    {
+                        var generalKnowledgeData = obj.generalKnowledge[random.Next(0, obj.generalKnowledge.Length)];
+
+                        this.Question = generalKnowledgeData.Question; //Taking the properties from the JSON file and loading it into the class
+                        this.CorrectAnswer = generalKnowledgeData.CorrectAnswer;
+                        this.Incorrect1 = generalKnowledgeData.Incorrect1;
+                        this.Incorrect2 = generalKnowledgeData.Incorrect2;
+                        this.Incorrect3 = generalKnowledgeData.Incorrect3;
+                    }
+                    else if (QuestionType == "Animals")
+                    {
+                        var animalsData = obj.animals[random.Next(0, obj.animals.Length)];
+
+                        this.Question = animalsData.Question;
+                        this.CorrectAnswer = animalsData.CorrectAnswer;
+                        this.Incorrect1 = animalsData.Incorrect1;
+                        this.Incorrect2 = animalsData.Incorrect2;
+                        this.Incorrect3 = animalsData.Incorrect3;
+                    }
+                    else if (QuestionType == "Films")
+                    {
+                        var filmsData = obj.films[random.Next(0, obj.films.Length)];
+
+                        this.Question = filmsData.Question;
+                        this.CorrectAnswer = filmsData.CorrectAnswer;
+                        this.Incorrect1 = filmsData.Incorrect1;
+                        this.Incorrect2 = filmsData.Incorrect2;
+                        this.Incorrect3 = filmsData.Incorrect3;
+                    }
+                    else if (QuestionType == "Music") 
+                    {
+                        var musicData = obj.music[random.Next(0, obj.music.Length)];
+
+                        this.Question = musicData.Question;
+                        this.CorrectAnswer = musicData.CorrectAnswer;
+                        this.Incorrect1 = musicData.Incorrect1;
+                        this.Incorrect2 = musicData.Incorrect2;
+                        this.Incorrect3 = musicData.Incorrect3;
+                    }
+                }
+            }
+            catch(Exception ex) //Catches any errors in case the formatting of the JSON goes wrong or corrupts
+            {
+                MessageBox.Show(ex.ToString());
             }
         }
     }
 
-    class JSONObject 
+    class JSONObject //The main structure of the JSON file
     {
-        public string Questions { get; set; }
-        public Film[] Films { get; set; }
-        public GeneralKnowledge[] GeneralKnowledge { get; set; }
-        public Music[] Music { get; set; }
-        public Animals Animals { get; set; }
+        public string? Questions { get; set; }
+        public GeneralKnowledge[]? generalKnowledge { get; set; }
+        public Animals[]? animals { get; set; }
+        public Films[]? films { get; set; }
+        public Music[]? music { get; set; }
+        
     }
 
+    //Getting each property of each category from JSON
 
-    public class Film
+    class GeneralKnowledge 
     {
-        public string Question { get; set; }
-        public string CorrectAnswer { get; set; }
-        public string Incorrect1 { get; set; }
-        public string Incorrect2 { get; set; }
-        public string Incorrect3 { get; set; }
+        public string? Question { get; set; }
+        public string? CorrectAnswer { get; set; }
+        public string? Incorrect1 { get; set; }
+        public string? Incorrect2 { get; set; }
+        public string? Incorrect3 { get; set; }
     }
-
-    public class GeneralKnowledge
+    class Animals
     {
-        public string Question { get; set; }
-        public string CorrectAnswer { get; set; }
-        public string Incorrect1 { get; set; }
-        public string Incorrect2 { get; set; }
-        public string Incorrect3 { get; set; }
+        public string? Question { get; set; }
+        public string? CorrectAnswer { get; set; }
+        public string? Incorrect1 { get; set; }
+        public string? Incorrect2 { get; set; }
+        public string? Incorrect3 { get; set; }
     }
-
-    public class Music
+    class Films
     {
-        public string Question { get; set; }
-        public string CorrectAnswer { get; set; }
-        public string Incorrect1 { get; set; }
-        public string Incorrect2 { get; set; }
-        public string Incorrect3 { get; set; }
+        public string? Question { get; set; }
+        public string? CorrectAnswer { get; set; }
+        public string? Incorrect1 { get; set; }
+        public string? Incorrect2 { get; set; }
+        public string? Incorrect3 { get; set; }
     }
-
-    public class Animals
+    class Music
     {
-        public string Question { get; set; }
-        public string CorrectAnswer { get; set; }
-        public string Incorrect1 { get; set; }
-        public string Incorrect2 { get; set; }
-        public string Incorrect3 { get; set; }
+        public string? Question { get; set; }
+        public string? CorrectAnswer { get; set; }
+        public string? Incorrect1 { get; set; }
+        public string? Incorrect2 { get; set; }
+        public string? Incorrect3 { get; set; }
     }
 }

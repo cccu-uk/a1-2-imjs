@@ -1,18 +1,33 @@
 ﻿{
   "Questions": "All Our Questions",
-  "General Knowledge": [
+  "GeneralKnowledge": [
     {
-      "Question": "HI",
-      "Correct answer": "Test1",
-      "Incorrect1": "Test2",
-      "Incorrect2": "Test3",
-      "Incorrect3": "Test4"
+      "Question": "What do cows drink?",
+      "CorrectAnswer": "Water",
+      "Incorrect1": "Milk",
+      "Incorrect2": "Beer",
+      "Incorrect3": "Petrol"
+    },
+    {
+      "Question": "Who is Rowan Atkinson most known as??",
+      "CorrectAnswer": "Mr Bean",
+      "Incorrect1": "Simon Cowell",
+      "Incorrect2": "The Rock",
+      "Incorrect3": "John Malkovich"
+    },
+    {
+      "Question": "",
+      "CorrectAnswer": "",
+      "Incorrect1": "",
+      "Incorrect2": "",
+      "Incorrect3": ""
     }
   ],
+
   "Animals": [
     {
       "Question": "Test",
-      "Correct answer": "Test",
+      "CorrectAnswer": "Test",
       "Incorrect1": "Test",
       "Incorrect2": "Test",
       "Incorrect3": "Test"
@@ -21,7 +36,7 @@
   "Films": [
     {
       "Question": "Test",
-      "Correct answer": "Test",
+      "CorrectAnswer": "Test",
       "Incorrect1": "Test",
       "Incorrect2": "Test",
       "Incorrect3": "Test"
@@ -30,7 +45,7 @@
   "Music": [
     {
       "Question": "Test",
-      "Correct answer": "Test",
+      "CorrectAnswer": "Test",
       "Incorrect1": "Test",
       "Incorrect2": "Test",
       "Incorrect3": "Test"
