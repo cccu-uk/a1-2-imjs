@@ -18,55 +18,121 @@ namespace QuizzApp
             InitializeComponent();
         }
 
+        public QuizForm QF = new QuizForm();
+
+        public QuestionBuilder QB { get; set; }
+
+        public List<QuestionBuilder> QL = new List<QuestionBuilder>();
+
         //THIS IS JUST A TEST FORM. WHOEVER IS DOING THE UI CAN CHANGE IT
         //THIS FORM WAS CREATED TO TEST THE JSON FILE AND SEE IF IT READS WELL
 
+        //var generalBuilder = new QuestionBuilder("General");
+        //string message = "Question:" + generalBuilder.Question + "\r\n" +
+        //                 "Correct: " + generalBuilder.CorrectAnswer + "\r\n" +
+        //                 "I1: " + generalBuilder.Incorrect1 + "\r\n" +
+        //                 "I2: " + generalBuilder.Incorrect2 + "\r\n" +
+        //                 "I3: " + generalBuilder.Incorrect3 + "\r\n";
+        //
+        //outputBox.Text = message;
+
         private void generalButton_Click(object sender, EventArgs e)
         {
-            var generalBuilder = new QuestionBuilder("General");
-            string message = "Question:" + generalBuilder.Question + "\r\n" +
-                             "Correct: " + generalBuilder.CorrectAnswer + "\r\n" +
-                             "I1: " + generalBuilder.Incorrect1 + "\r\n" +
-                             "I2: " + generalBuilder.Incorrect2 + "\r\n" +
-                             "I3: " + generalBuilder.Incorrect3 + "\r\n";
 
-            outputBox.Text = message;
+            for (int i = 0; i < 5; i++)
+            {
+                QB = new QuestionBuilder("General");
+
+                while (true)
+                {
+                    if (QL.Contains(QB))
+                    {
+                        QB = new QuestionBuilder("General");
+                    }
+                    else
+                    { 
+                        QL.Add(QB);
+                        break;
+                    }
+                }
+            }            
+
+            QF.Visible = true;
         }
-
+         
         private void musicButton_Click(object sender, EventArgs e)
         {
-            var musicBuilder = new QuestionBuilder("Music");
-            string message = "Question:" + musicBuilder.Question + "\r\n" +
-                             "Correct: " + musicBuilder.CorrectAnswer + "\r\n" +
-                             "I1: " + musicBuilder.Incorrect1 + "\r\n" +
-                             "I2: " + musicBuilder.Incorrect2 + "\r\n" +
-                             "I3: " + musicBuilder.Incorrect3 + "\r\n";
 
-            outputBox.Text = message;
+            for (int i = 0; i < 5; i++)
+            {
+                QB = new QuestionBuilder("Music");
+
+                while (true)
+                {
+                    if (QL.Contains(QB))
+                    {
+                        QB = new QuestionBuilder("Music");
+                    }
+                    else
+                    {
+                        QL.Add(QB);
+                        break;
+                    }
+                }
+            }
+
+
+            QF.Visible = true;
         }
 
         private void filmsButton_Click(object sender, EventArgs e)
         {
-            var filmsBuilder = new QuestionBuilder("Films");
-            string message = "Question:" + filmsBuilder.Question + "\r\n" +
-                             "Correct: " + filmsBuilder.CorrectAnswer + "\r\n" +
-                             "I1: " + filmsBuilder.Incorrect1 + "\r\n" +
-                             "I2: " + filmsBuilder.Incorrect2 + "\r\n" +
-                             "I3: " + filmsBuilder.Incorrect3 + "\r\n";
 
-            outputBox.Text = message;
+            for (int i = 0; i < 5; i++)
+            {
+                QB = new QuestionBuilder("Films");
+
+                while (true)
+                {
+                    if (QL.Contains(QB))
+                    {
+                        QB = new QuestionBuilder("Films");
+                    }
+                    else
+                    {
+                        QL.Add(QB);
+                        break;
+                    }
+                }
+            }
+
+
+            QF.Visible = true;
         }
 
         private void animalsButton_Click(object sender, EventArgs e)
         {
-            var animalsBuilder = new QuestionBuilder("Animals");
-            string message = "Question:" + animalsBuilder.Question + "\r\n" +
-                             "Correct: " + animalsBuilder.CorrectAnswer + "\r\n" +
-                             "I1: " + animalsBuilder.Incorrect1 + "\r\n" +
-                             "I2: " + animalsBuilder.Incorrect2 + "\r\n" +
-                             "I3: " + animalsBuilder.Incorrect3 + "\r\n";
 
-            outputBox.Text = message;
+            for (int i = 0; i < 5; i++)
+            {
+                QB = new QuestionBuilder("Animals");
+
+                while (true)
+                {
+                    if (QL.Contains(QB))
+                    {
+                        QB = new QuestionBuilder("Animals");
+                    }
+                    else
+                    {
+                        QL.Add(QB);
+                        break;
+                    }
+                }
+            }
+
+
+            QF.Visible = true;
         }
     }
 }

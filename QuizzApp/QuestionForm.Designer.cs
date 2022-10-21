@@ -37,9 +37,10 @@
             // 
             // generalButton
             // 
-            this.generalButton.Location = new System.Drawing.Point(12, 10);
+            this.generalButton.Location = new System.Drawing.Point(10, 8);
+            this.generalButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.generalButton.Name = "generalButton";
-            this.generalButton.Size = new System.Drawing.Size(119, 62);
+            this.generalButton.Size = new System.Drawing.Size(104, 46);
             this.generalButton.TabIndex = 0;
             this.generalButton.Text = "General";
             this.generalButton.UseVisualStyleBackColor = true;
@@ -47,9 +48,10 @@
             // 
             // filmsButton
             // 
-            this.filmsButton.Location = new System.Drawing.Point(12, 87);
+            this.filmsButton.Location = new System.Drawing.Point(10, 65);
+            this.filmsButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.filmsButton.Name = "filmsButton";
-            this.filmsButton.Size = new System.Drawing.Size(119, 62);
+            this.filmsButton.Size = new System.Drawing.Size(104, 46);
             this.filmsButton.TabIndex = 1;
             this.filmsButton.Text = "Films";
             this.filmsButton.UseVisualStyleBackColor = true;
@@ -57,9 +59,10 @@
             // 
             // musicButton
             // 
-            this.musicButton.Location = new System.Drawing.Point(149, 12);
+            this.musicButton.Location = new System.Drawing.Point(130, 9);
+            this.musicButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.musicButton.Name = "musicButton";
-            this.musicButton.Size = new System.Drawing.Size(119, 62);
+            this.musicButton.Size = new System.Drawing.Size(104, 46);
             this.musicButton.TabIndex = 2;
             this.musicButton.Text = "Music";
             this.musicButton.UseVisualStyleBackColor = true;
@@ -67,9 +70,10 @@
             // 
             // animalsButton
             // 
-            this.animalsButton.Location = new System.Drawing.Point(149, 87);
+            this.animalsButton.Location = new System.Drawing.Point(130, 65);
+            this.animalsButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.animalsButton.Name = "animalsButton";
-            this.animalsButton.Size = new System.Drawing.Size(119, 62);
+            this.animalsButton.Size = new System.Drawing.Size(104, 46);
             this.animalsButton.TabIndex = 3;
             this.animalsButton.Text = "Animals";
             this.animalsButton.UseVisualStyleBackColor = true;
@@ -77,23 +81,25 @@
             // 
             // outputBox
             // 
-            this.outputBox.Location = new System.Drawing.Point(17, 168);
+            this.outputBox.Location = new System.Drawing.Point(15, 126);
+            this.outputBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.outputBox.Multiline = true;
             this.outputBox.Name = "outputBox";
-            this.outputBox.Size = new System.Drawing.Size(357, 156);
+            this.outputBox.Size = new System.Drawing.Size(313, 118);
             this.outputBox.TabIndex = 4;
             // 
             // QuestionForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(700, 338);
             this.Controls.Add(this.outputBox);
             this.Controls.Add(this.animalsButton);
             this.Controls.Add(this.musicButton);
             this.Controls.Add(this.filmsButton);
             this.Controls.Add(this.generalButton);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "QuestionForm";
             this.Text = "QuestionForm";
             this.ResumeLayout(false);

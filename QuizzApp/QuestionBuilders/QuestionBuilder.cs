@@ -2,7 +2,7 @@
 
 namespace QuizzApp.QuestionBuilders
 {
-    internal class QuestionBuilder
+    public class QuestionBuilder : Form
     {
         //IMPORTANT - Please make sure to Copy and Paste the JSON file into your /bin/Debug/net6.0-windows Folder before running the program
         //ALL QUESTIONS (Members) MUST HAVE THE SAME PROPERTIES AND MUST HAVE A COMMA AT THE END OF EACH ENTRY NEXT TO THE CURLY BRACKETS
@@ -14,6 +14,8 @@ namespace QuizzApp.QuestionBuilders
         public string? Incorrect1 { get; set; }
         public string? Incorrect2 { get; set; }
         public string? Incorrect3 { get; set; }
+
+        public List<string>? AnswerList = new List<string>();
 
         public QuestionBuilder(string QuestionType) //There is more than 1 category so we need an input
         {
@@ -35,6 +37,7 @@ namespace QuizzApp.QuestionBuilders
                         this.Incorrect1 = generalKnowledgeData.Incorrect1;
                         this.Incorrect2 = generalKnowledgeData.Incorrect2;
                         this.Incorrect3 = generalKnowledgeData.Incorrect3;
+
                     }
                     else if (QuestionType == "Animals")
                     {
@@ -66,6 +69,12 @@ namespace QuizzApp.QuestionBuilders
                         this.Incorrect2 = musicData.Incorrect2;
                         this.Incorrect3 = musicData.Incorrect3;
                     }
+
+                    AnswerList.Add(Incorrect1);
+                    AnswerList.Add(Incorrect2);
+                    AnswerList.Add(Incorrect3);
+                    AnswerList.Add(CorrectAnswer);
+
                 }
             }
             catch(Exception ex) //Catches any errors in case the formatting of the JSON goes wrong or corrupts
