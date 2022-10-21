@@ -35,11 +35,74 @@
   ],
   "Films": [
     {
-      "Question": "Test",
-      "CorrectAnswer": "Test",
-      "Incorrect1": "Test",
-      "Incorrect2": "Test",
-      "Incorrect3": "Test"
+      "Question": "What Name did Stan Lee give Iron Man In Captain America: Civial War?",
+      "CorrectAnswer": "Tony Stank",
+      "Incorrect1": "Tony Stank",
+      "Incorrect2": "Tony Stork",
+      "Incorrect3": "Tony Spank"
+    },
+    {
+      "Question": "What is the name of Thor’s hammer?",
+      "CorrectAnswer": "Mjolnir",
+      "Incorrect1": "Vanir",
+      "Incorrect2": "Norn",
+      "Incorrect3": "Aesir"
+    },
+    {
+      "Question": "Which character is not from Justice league?",
+      "CorrectAnswer": "Iron Man",
+      "Incorrect1": "Superman",
+      "Incorrect2": "Hawk Girl",
+      "Incorrect3": "Martian Manhunter"
+    },
+    {
+      "Question": "Which popular DC character uses an bow and arrow?",
+      "CorrectAnswer": "Green Arrow",
+      "Incorrect1": "Hawkeye",
+      "Incorrect2": "Archer",
+      "Incorrect3": "Robin Hood"
+    },
+    {
+      "Question": "Who was Snow White's Enemy in the film Snow White and the Seven Dwarfs (1937)?",
+      "CorrectAnswer": "The Evil Queen",
+      "Incorrect1": "Maleficent",
+      "Incorrect2": "Cruella De Vil",
+      "Incorrect3": "Scar"
+    },
+    {
+      "Question": "What is the name of Simbas dad in The Lion King",
+      "CorrectAnswer": "Mufasa",
+      "Incorrect1": "Timon",
+      "Incorrect2": "Pumbaa",
+      "Incorrect3": "Nala"
+    },
+    {
+      "Question": "In Forrest Gump, how does Bubba Die?",
+      "CorrectAnswer": "He gets shot",
+      "Incorrect1": "He gets blown up",
+      "Incorrect2": "He drowns",
+      "Incorrect3": "He has a heart attack"
+    },
+    {
+      "Question": "In Forrest Gump, what was Forrests IQ as a child?",
+      "CorrectAnswer": "75",
+      "Incorrect1": "56",
+      "Incorrect2": "80",
+      "Incorrect3": "81"
+    },
+    {
+      "Question": "In The Wonderfull Wizard Of Oz, What did the Tin Woodsman accidently kill?",
+      "CorrectAnswer": "He Accidently killed an bettle",
+      "Incorrect1": "He accidentally killed a ant",
+      "Incorrect2": "He accidentally killed a mouse",
+      "Incorrect3": "He Accidentally killled a spider"
+    },
+    {
+      "Question": "In The Wonderfull Wizard Of Oz, How did Oz appear to the Scarecrow?",
+      "CorrectAnswer": "As a beutiful woman",
+      "Incorrect1": "As a enormous head",
+      "Incorrect2": "As a giant ball of fire",
+      "Incorrect3": "As a beast"
     }
   ],
   "Music": [
