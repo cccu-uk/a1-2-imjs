@@ -26,16 +26,79 @@
 
   "Animals": [
     {
-      "Question": "Test",
-      "CorrectAnswer": "Test",
-      "Incorrect1": "Test",
-      "Incorrect2": "Test",
-      "Incorrect3": "Test"
+      "Question": "What is a group of kittens called?",
+      "CorrectAnswer": "A Kindle",
+      "Incorrect1": "A Fluffle",
+      "Incorrect2": "A Clowder",
+      "Incorrect3": "A Pod"
+    },
+    {
+      "Question": "The London eye rotates twice as fast as which animal sprints?",
+      "CorrectAnswer": "A Tortoise",
+      "Incorrect1": "A Sloth",
+      "Incorrect2": "A Cheetah",
+      "Incorrect3": "A Panda"
+    },
+    {
+      "Question": "What do camels store in their humps?",
+      "CorrectAnswer": "Fat",
+      "Incorrect1": "Water",
+      "Incorrect2": "Spit",
+      "Incorrect3": "Grass"
+    },
+    {
+      "Question": "How long do joeys stay in the kangaroos pouch before they are fully independent?",
+      "CorrectAnswer": "8 Months",
+      "Incorrect1": "4 Months",
+      "Incorrect2": "10 Months",
+      "Incorrect3": "8 Months"
+    },
+    {
+      "Question": "Which animal has the longest lifespan?",
+      "CorrectAnswer": "Immortal Jellyfish",
+      "Incorrect1": "Ocean Quahog",
+      "Incorrect2": "Artic Whale",
+      "Incorrect3": "Galapagos Giant Tortoise"
+    },
+    {
+      "Question": "What is the strongest animal proportional to its size?",
+      "CorrectAnswer": "Dung Beetle",
+      "Incorrect1": "Leaf Cutter ant",
+      "Incorrect2": "Grizzly Bear",
+      "Incorrect3": "Highland Gorilla"
+    },
+    {
+      "Question": "What do male penguins often give to female penguins to win them over?",
+      "CorrectAnswer": "A Rock",
+      "Incorrect1": "A Fish",
+      "Incorrect2": "A Feather",
+      "Incorrect3": "A Seaweed"
+    },
+    {
+      "Question": "Which bird is unable to move their eyes?",
+      "CorrectAnswer": "Owls",
+      "Incorrect1": "Eagles",
+      "Incorrect2": "Robins",
+      "Incorrect3": "Chickens"
+    },
+    {
+      "Question": "Which has the thickest fur of any mammal?",
+      "CorrectAnswer": "Sea Otter",
+      "Incorrect1": "Bison",
+      "Incorrect2": "Polar Bear",
+      "Incorrect3": "Artic Fox"
+    },
+    {
+      "Question": "The nose of what animal changes colour as it ages?",
+      "CorrectAnswer": "Lion",
+      "Incorrect1": "Tiger",
+      "Incorrect2": "Cheetah",
+      "Incorrect3": "Leopard"
     }
   ],
   "Films": [
     {
-      "Question": "What Name did Stan Lee give Iron Man In Captain America: Civial War?",
+      "Question": "What Name did Stan Lee give Iron Man In Captain America: Civil War?",
       "CorrectAnswer": "Tony Stank",
       "Incorrect1": "Tony Stank",
       "Incorrect2": "Tony Stork",
