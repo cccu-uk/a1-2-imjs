@@ -18,11 +18,7 @@ namespace QuizzApp
             InitializeComponent();
         }
 
-        public QuizForm QF = new QuizForm();
-
         public QuestionBuilder QB { get; set; }
-
-        public List<QuestionBuilder> QL = new List<QuestionBuilder>();
 
         //THIS IS JUST A TEST FORM. WHOEVER IS DOING THE UI CAN CHANGE IT
         //THIS FORM WAS CREATED TO TEST THE JSON FILE AND SEE IF IT READS WELL
@@ -38,6 +34,7 @@ namespace QuizzApp
 
         private void generalButton_Click(object sender, EventArgs e)
         {
+            List<QuestionBuilder> QL = new List<QuestionBuilder>();
 
             for (int i = 0; i < 5; i++)
             {
@@ -55,13 +52,14 @@ namespace QuizzApp
                         break;
                     }
                 }
-            }            
-
-            QF.Visible = true;
+            }
+            QuizBuilder.LoadQuestionForm(QL);
+            
         }
          
         private void musicButton_Click(object sender, EventArgs e)
         {
+            List<QuestionBuilder> QL = new List<QuestionBuilder>();
 
             for (int i = 0; i < 5; i++)
             {
@@ -82,11 +80,12 @@ namespace QuizzApp
             }
 
 
-            QF.Visible = true;
+            QuizBuilder.LoadQuestionForm(QL);
         }
 
         private void filmsButton_Click(object sender, EventArgs e)
         {
+            List<QuestionBuilder> QL = new List<QuestionBuilder>();
 
             for (int i = 0; i < 5; i++)
             {
@@ -107,11 +106,12 @@ namespace QuizzApp
             }
 
 
-            QF.Visible = true;
+            QuizBuilder.LoadQuestionForm(QL);
         }
 
         private void animalsButton_Click(object sender, EventArgs e)
         {
+            List<QuestionBuilder> QL = new List<QuestionBuilder>();
 
             for (int i = 0; i < 5; i++)
             {
@@ -132,7 +132,7 @@ namespace QuizzApp
             }
 
 
-            QF.Visible = true;
+            QuizBuilder.LoadQuestionForm(QL);
         }
     }
 }

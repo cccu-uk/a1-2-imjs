@@ -16,5 +16,15 @@ namespace QuizzApp
         {
             InitializeComponent();
         }
+
+        private void QuizForm_Load(object sender, EventArgs e)
+        {
+            QuizBuilder.LoadQuestion(labelQuestionNum, textBoxQuestion, buttonAnswerOne, buttonAnswerTwo, buttonAnswerThree, buttonAnswerFour);
+        }
+
+        private void CloseButton_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+        }
     }
 }

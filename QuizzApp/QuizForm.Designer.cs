@@ -29,11 +29,12 @@
         private void InitializeComponent()
         {
             this.labelQuestionNum = new System.Windows.Forms.Label();
-            this.labelQuestion = new System.Windows.Forms.Label();
             this.buttonAnswerOne = new System.Windows.Forms.Button();
             this.buttonAnswerTwo = new System.Windows.Forms.Button();
             this.buttonAnswerThree = new System.Windows.Forms.Button();
             this.buttonAnswerFour = new System.Windows.Forms.Button();
+            this.CloseButton = new System.Windows.Forms.Button();
+            this.textBoxQuestion = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // labelQuestionNum
@@ -45,15 +46,6 @@
             this.labelQuestionNum.Size = new System.Drawing.Size(30, 25);
             this.labelQuestionNum.TabIndex = 0;
             this.labelQuestionNum.Text = "Q.";
-            // 
-            // labelQuestion
-            // 
-            this.labelQuestion.AutoSize = true;
-            this.labelQuestion.Location = new System.Drawing.Point(30, 56);
-            this.labelQuestion.Name = "labelQuestion";
-            this.labelQuestion.Size = new System.Drawing.Size(38, 15);
-            this.labelQuestion.TabIndex = 1;
-            this.labelQuestion.Text = "label1";
             // 
             // buttonAnswerOne
             // 
@@ -91,19 +83,39 @@
             this.buttonAnswerFour.Text = "button4";
             this.buttonAnswerFour.UseVisualStyleBackColor = true;
             // 
+            // CloseButton
+            // 
+            this.CloseButton.Location = new System.Drawing.Point(582, 12);
+            this.CloseButton.Name = "CloseButton";
+            this.CloseButton.Size = new System.Drawing.Size(75, 23);
+            this.CloseButton.TabIndex = 6;
+            this.CloseButton.Text = "Close";
+            this.CloseButton.UseVisualStyleBackColor = true;
+            this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
+            // 
+            // textBoxQuestion
+            // 
+            this.textBoxQuestion.Location = new System.Drawing.Point(39, 46);
+            this.textBoxQuestion.Multiline = true;
+            this.textBoxQuestion.Name = "textBoxQuestion";
+            this.textBoxQuestion.Size = new System.Drawing.Size(591, 45);
+            this.textBoxQuestion.TabIndex = 7;
+            // 
             // QuizForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(669, 450);
+            this.Controls.Add(this.textBoxQuestion);
+            this.Controls.Add(this.CloseButton);
             this.Controls.Add(this.buttonAnswerFour);
             this.Controls.Add(this.buttonAnswerThree);
             this.Controls.Add(this.buttonAnswerTwo);
             this.Controls.Add(this.buttonAnswerOne);
-            this.Controls.Add(this.labelQuestion);
             this.Controls.Add(this.labelQuestionNum);
             this.Name = "QuizForm";
             this.Text = "QuizForm";
+            this.Load += new System.EventHandler(this.QuizForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -112,10 +124,11 @@
         #endregion
 
         private Label labelQuestionNum;
-        private Label labelQuestion;
         private Button buttonAnswerOne;
         private Button buttonAnswerTwo;
         private Button buttonAnswerThree;
         private Button buttonAnswerFour;
+        private Button CloseButton;
+        private TextBox textBoxQuestion;
     }
 }
