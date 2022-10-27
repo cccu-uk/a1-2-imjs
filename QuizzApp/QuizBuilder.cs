@@ -1,8 +1,11 @@
-﻿using System;
+﻿using QuizzApp.QuestionBuilders;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+
 
 namespace QuizzApp
 {
@@ -23,8 +26,13 @@ namespace QuizzApp
         }
 
         public static int QuestionNumber = 1;
+        public static int correctCount = 0;
+        public static string rightAnswer;        
 
         public static List<QuestionBuilders.QuestionBuilder> QuestionList = new List<QuestionBuilders.QuestionBuilder>();
+
+       
+
         public static void LoadQuestionForm(List<QuestionBuilders.QuestionBuilder> QL)
         {
             QuizForm QF = new QuizForm();
@@ -46,13 +54,43 @@ namespace QuizzApp
             Answer.Add(CurrentQuestion.Incorrect2);
             Answer.Add(CurrentQuestion.Incorrect3);
 
+            CurrentQuestion.CorrectAnswer = rightAnswer;
+
             var ShuffledAnswers = Answer.OrderBy(a => Guid.NewGuid()).ToList();
 
             button1.Text = ShuffledAnswers[0];
             button2.Text = ShuffledAnswers[1];
             button3.Text = ShuffledAnswers[2];
             button4.Text = ShuffledAnswers[3];
-            
+
+
         }
+
+        public static void checkAnswer(Button button)
+        {
+            // trying to convert the button text to string right answer. 
+            
+            if (button = rightAnswer)
+                isCorrectAnswer();
+            else
+                isIncorrectAnswer();
+
+        }
+
+        public static void isCorrectAnswer()
+        {
+            /// update correct answer count & load next question 
+            correctCount += 1;
+            MessageBox.Show("Correct.");
+        }
+
+        public static void isIncorrectAnswer()
+        {
+            /// load next question leaving correctCount as it is.
+            
+            MessageBox.Show("Incorrect.");
+        }
+        
+
     }
 }

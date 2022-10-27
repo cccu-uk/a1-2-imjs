@@ -26,5 +26,26 @@ namespace QuizzApp
         {
             this.Visible = false;
         }
+
+        private void buttonAnswerOne_Click(object sender, EventArgs e)
+        {
+           QuizBuilder.checkAnswer(buttonAnswerOne);
+        }
+
+        private void buttonAnswerTwo_Click(object sender, EventArgs e)
+        {
+            QuizBuilder.checkAnswer(buttonAnswerTwo);
+        }
+
+        private void buttonAnswerThree_Click(object sender, EventArgs e)
+        {
+            
+            QuizBuilder.checkAnswer(buttonAnswerThree);
+        }
+
+        private void buttonAnswerFour_Click(object sender, EventArgs e)
+        {
+            QuizBuilder.checkAnswer(buttonAnswerFour);
+        }
     }
 }

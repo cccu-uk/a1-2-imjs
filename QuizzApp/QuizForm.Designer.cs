@@ -55,6 +55,7 @@
             this.buttonAnswerOne.TabIndex = 2;
             this.buttonAnswerOne.Text = "button1";
             this.buttonAnswerOne.UseVisualStyleBackColor = true;
+            this.buttonAnswerOne.Click += new System.EventHandler(this.buttonAnswerOne_Click);
             // 
             // buttonAnswerTwo
             // 
@@ -64,6 +65,7 @@
             this.buttonAnswerTwo.TabIndex = 3;
             this.buttonAnswerTwo.Text = "button2";
             this.buttonAnswerTwo.UseVisualStyleBackColor = true;
+            this.buttonAnswerTwo.Click += new System.EventHandler(this.buttonAnswerTwo_Click);
             // 
             // buttonAnswerThree
             // 
@@ -73,6 +75,7 @@
             this.buttonAnswerThree.TabIndex = 4;
             this.buttonAnswerThree.Text = "button3";
             this.buttonAnswerThree.UseVisualStyleBackColor = true;
+            this.buttonAnswerThree.Click += new System.EventHandler(this.buttonAnswerThree_Click);
             // 
             // buttonAnswerFour
             // 
@@ -82,6 +85,7 @@
             this.buttonAnswerFour.TabIndex = 5;
             this.buttonAnswerFour.Text = "button4";
             this.buttonAnswerFour.UseVisualStyleBackColor = true;
+            this.buttonAnswerFour.Click += new System.EventHandler(this.buttonAnswerFour_Click);
             // 
             // CloseButton
             // 
