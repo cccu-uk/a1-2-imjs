@@ -16,11 +16,60 @@
       "Incorrect3": "John Malkovich"
     },
     {
-      "Question": "",
-      "CorrectAnswer": "",
-      "Incorrect1": "",
-      "Incorrect2": "",
-      "Incorrect3": ""
+      "Question": "Which element is said to keep bones strong?",
+      "CorrectAnswer": "Calcium",
+      "Incorrect1": "Hydrogen",
+      "Incorrect2": "Lead",
+      "Incorrect3": "Uranium"
+    },
+    {
+      "Question": "Which English city is known as the Steel City?",
+      "CorrectAnswer": "Sheffield",
+      "Incorrect1": "Birmingham",
+      "Incorrect2": "Liverpool",
+      "Incorrect3": "London"
+    },
+    {
+      "Question": "What was Meta Platforms Inc formerly known as?",
+      "CorrectAnswer": "Facebook",
+      "Incorrect1": "Instagram",
+      "Incorrect2": "Snapchat",
+      "Incorrect3": "Tik Tok"
+    },
+    {
+      "Question": "What is the currency of Poland?",
+      "CorrectAnswer": "Zloty",
+      "Incorrect1": "Pounds",
+      "Incorrect2": "Rupees",
+      "Incorrect3": "Dollars"
+    },
+    {
+      "Question": "What is the name of the winged horse in Greek mythology?",
+      "CorrectAnswer": "Pegasus",
+      "Incorrect1": "Zeus",
+      "Incorrect2": "Poseidon",
+      "Incorrect3": "Achilles"
+    },
+    {
+      "Question": "Which body sets the interest rates in the UK?",
+      "CorrectAnswer": "Bank of England",
+      "Incorrect1": "Bank of Baroda",
+      "Incorrect2": "HM Revenue & Customs",
+      "Incorrect3": "Barclays"
+    },
+    {
+      "Question": "In which sport is the Davis Cup contested?",
+      "CorrectAnswer": "Tennis",
+      "Incorrect1": "Football",
+      "Incorrect2": "Cricket",
+      "Incorrect3": "Basketball"
+    },
+    {
+      "Question": "What brand of beer does Homer Simpson drink?",
+      "CorrectAnswer": "Duff Beer",
+      "Incorrect1": "Stella Artois",
+      "Incorrect2": "Fosters",
+      "Incorrect3": "Budweiser"
     }
   ],
 
