@@ -29,23 +29,23 @@ namespace QuizzApp
 
         private void buttonAnswerOne_Click(object sender, EventArgs e)
         {
-           QuizBuilder.checkAnswer(buttonAnswerOne);
+           QuizBuilder.CheckAnswer(buttonAnswerOne);
         }
 
         private void buttonAnswerTwo_Click(object sender, EventArgs e)
         {
-            QuizBuilder.checkAnswer(buttonAnswerTwo);
+            QuizBuilder.CheckAnswer(buttonAnswerTwo);
         }
 
         private void buttonAnswerThree_Click(object sender, EventArgs e)
         {
             
-            QuizBuilder.checkAnswer(buttonAnswerThree);
+            QuizBuilder.CheckAnswer(buttonAnswerThree);
         }
 
         private void buttonAnswerFour_Click(object sender, EventArgs e)
         {
-            QuizBuilder.checkAnswer(buttonAnswerFour);
+            QuizBuilder.CheckAnswer(buttonAnswerFour);
         }
     }
 }

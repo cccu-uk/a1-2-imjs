@@ -66,31 +66,39 @@ namespace QuizzApp
 
         }
 
-        public static void checkAnswer(Button button)
+        /// <summary>
+        /// method to check the selected answer is correct
+        /// adds to question counter and correct answer
+        /// Loads next question
+        /// </summary>
+        /// <param name="button"></param>
+        public static IEnumerable<int> CheckAnswer(Button button)
         {
-            // trying to convert the button text to string right answer. 
-            
-            if (button = rightAnswer)
-                isCorrectAnswer();
+            string b = button.ToString();
+            QuestionNumber = +1;
+
+            if (QuestionNumber < 5 && b==rightAnswer)
+            {
+                correctCount = + 1;
+                LoadQuestion();
+                yield return correctCount;
+                
+            }
+            else if (QuestionNumber < 5 && b != rightAnswer)
+            {
+                LoadQuestion(QuestionNumber);
+                yield return correctCount;
+            }
             else
-                isIncorrectAnswer();
-
-        }
-
-        public static void isCorrectAnswer()
-        {
-            /// update correct answer count & load next question 
-            correctCount += 1;
-            MessageBox.Show("Correct.");
-        }
-
-        public static void isIncorrectAnswer()
-        {
-            /// load next question leaving correctCount as it is.
+            {
+                MessageBox.Show("Your score:" + correctCount + " out of 5.");
+                
+            }
             
-            MessageBox.Show("Incorrect.");
+         
         }
-        
+
+       
 
     }
 }
