@@ -35,48 +35,86 @@ namespace QuizzApp
         private void generalButton_Click(object sender, EventArgs e)
         {
             List<QuestionBuilder> QL = new List<QuestionBuilder>();
+            bool loop = true;
+            bool AddQuestion = false;
 
             for (int i = 0; i < 5; i++)
             {
                 QB = new QuestionBuilder("General");
+                loop = true;
 
-                while (true)
+                while (loop == true)
                 {
-                    if (QL.Contains(QB))
+                    if (QL.Count == 0)
                     {
-                        QB = new QuestionBuilder("General");
+                        QL.Add(QB);
+                        loop = false;
                     }
                     else
-                    { 
-                        QL.Add(QB);
-                        break;
+                    {
+                        foreach (QuestionBuilder q in QL)
+                        {
+                            if (q.Question == QB.Question)
+                            {
+                                QB = new QuestionBuilder("General");
+                                loop = true;
+                            }
+                            else
+                            {
+                                string temp = QB.Question;
+                                AddQuestion = true;
+                                loop = false;
+                            }
+                        }
                     }
                 }
+
+                if (AddQuestion == true) { QL.Add(QB); }
             }
+
+
             QuizBuilder.LoadQuestionForm(QL);
-            
+
         }
          
         private void musicButton_Click(object sender, EventArgs e)
         {
             List<QuestionBuilder> QL = new List<QuestionBuilder>();
+            bool loop = true;
+            bool AddQuestion = false;
 
             for (int i = 0; i < 5; i++)
             {
                 QB = new QuestionBuilder("Music");
+                loop = true;
 
-                while (true)
+                while (loop == true)
                 {
-                    if (QL.Contains(QB))
+                    if (QL.Count == 0)
                     {
-                        QB = new QuestionBuilder("Music");
+                        QL.Add(QB);
+                        loop = false;
                     }
                     else
                     {
-                        QL.Add(QB);
-                        break;
+                        foreach (QuestionBuilder q in QL)
+                        {
+                            if (q.Question == QB.Question)
+                            {
+                                QB = new QuestionBuilder("Music");
+                                loop = true;
+                            }
+                            else
+                            {
+                                string temp = QB.Question;
+                                AddQuestion = true;
+                                loop = false;
+                            }
+                        }
                     }
                 }
+
+                if (AddQuestion == true) { QL.Add(QB); }
             }
 
 
@@ -86,23 +124,41 @@ namespace QuizzApp
         private void filmsButton_Click(object sender, EventArgs e)
         {
             List<QuestionBuilder> QL = new List<QuestionBuilder>();
+            bool loop = true;
+            bool AddQuestion = false;
 
             for (int i = 0; i < 5; i++)
             {
                 QB = new QuestionBuilder("Films");
+                loop = true;
 
-                while (true)
+                while (loop == true)
                 {
-                    if (QL.Contains(QB))
+                    if (QL.Count == 0)
                     {
-                        QB = new QuestionBuilder("Films");
+                        QL.Add(QB);
+                        loop = false;
                     }
                     else
                     {
-                        QL.Add(QB);
-                        break;
+                        foreach (QuestionBuilder q in QL)
+                        {
+                            if (q.Question == QB.Question)
+                            {
+                                QB = new QuestionBuilder("Films");
+                                loop = true;
+                            }
+                            else
+                            {
+                                string temp = QB.Question;
+                                AddQuestion = true;
+                                loop = false;
+                            }
+                        }
                     }
                 }
+
+                if (AddQuestion == true) { QL.Add(QB); }
             }
 
 
@@ -112,27 +168,46 @@ namespace QuizzApp
         private void animalsButton_Click(object sender, EventArgs e)
         {
             List<QuestionBuilder> QL = new List<QuestionBuilder>();
+            bool loop = true;
+            bool AddQuestion = false;
 
             for (int i = 0; i < 5; i++)
             {
                 QB = new QuestionBuilder("Animals");
+                loop = true;
 
-                while (true)
+                while (loop == true)
                 {
-                    if (QL.Contains(QB))
+                    if (QL.Count == 0)
                     {
-                        QB = new QuestionBuilder("Animals");
+                        QL.Add(QB);
+                        loop = false;
                     }
                     else
                     {
-                        QL.Add(QB);
-                        break;
+                        foreach (QuestionBuilder q in QL)
+                        {
+                            if (q.Question == QB.Question)
+                            {
+                                QB = new QuestionBuilder("Animals");
+                                loop = true;
+                            }
+                            else
+                            {
+                                string temp = QB.Question;
+                                AddQuestion = true;
+                                loop = false;
+                            }
+                        }
                     }
                 }
+
+                if (AddQuestion == true) { QL.Add(QB); }
             }
 
 
             QuizBuilder.LoadQuestionForm(QL);
         }
+
     }
 }

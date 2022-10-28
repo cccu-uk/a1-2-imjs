@@ -85,7 +85,7 @@
             this.outputBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.outputBox.Multiline = true;
             this.outputBox.Name = "outputBox";
-            this.outputBox.Size = new System.Drawing.Size(313, 118);
+            this.outputBox.Size = new System.Drawing.Size(219, 118);
             this.outputBox.TabIndex = 4;
             // 
             // QuestionForm

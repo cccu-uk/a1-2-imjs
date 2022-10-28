@@ -54,7 +54,7 @@ namespace QuizzApp
             Answer.Add(CurrentQuestion.Incorrect2);
             Answer.Add(CurrentQuestion.Incorrect3);
 
-            CurrentQuestion.CorrectAnswer = rightAnswer;
+            rightAnswer = CurrentQuestion.CorrectAnswer;
 
             var ShuffledAnswers = Answer.OrderBy(a => Guid.NewGuid()).ToList();
 
@@ -72,33 +72,20 @@ namespace QuizzApp
         /// Loads next question
         /// </summary>
         /// <param name="button"></param>
-        public static IEnumerable<int> CheckAnswer(Button button)
+        public static void CheckAnswer(Button button)
         {
-            string b = button.ToString();
-            QuestionNumber = +1;
+            string b = button.Text;
 
-            if (QuestionNumber < 5 && b==rightAnswer)
+            if (b == rightAnswer)
             {
-                correctCount = + 1;
-                LoadQuestion();
-                yield return correctCount;
-                
+                correctCount = correctCount + 1;
+                QuestionNumber = QuestionNumber + 1;
+
             }
-            else if (QuestionNumber < 5 && b != rightAnswer)
+            else if (b != rightAnswer)
             {
-                LoadQuestion(QuestionNumber);
-                yield return correctCount;
+                QuestionNumber = QuestionNumber + 1;
             }
-            else
-            {
-                MessageBox.Show("Your score:" + correctCount + " out of 5.");
-                
-            }
-            
-         
         }
-
-       
-
     }
 }
