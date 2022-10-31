@@ -87,5 +87,10 @@ namespace QuizzApp
                 QuestionNumber = QuestionNumber + 1;
             }
         }
+
+        public static void SkipQuestion() 
+        {
+            QuestionNumber = QuestionNumber + 1;
+        }
     }
 }

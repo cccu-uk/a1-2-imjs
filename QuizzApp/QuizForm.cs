@@ -16,6 +16,14 @@ namespace QuizzApp
         public QuizForm()
         {
             InitializeComponent();
+            InitialiseTimer();
+        }
+
+        private void InitialiseTimer() //This must be called in order to start OR reset the timer
+        {
+            timerLabel.Text = "10";
+            questionTimer.Interval = 1000; //1 Second
+            questionTimer.Start();
         }
 
         private void QuizForm_Load(object sender, EventArgs e)
@@ -34,6 +42,7 @@ namespace QuizzApp
             {
                 QuizBuilder.CheckAnswer(buttonAnswerOne);
                 QuizBuilder.LoadQuestion(labelQuestionNum, textBoxQuestion, buttonAnswerOne, buttonAnswerTwo, buttonAnswerThree, buttonAnswerFour);
+                InitialiseTimer();
             }
             else
             {
@@ -52,6 +61,7 @@ namespace QuizzApp
             {
                 QuizBuilder.CheckAnswer(buttonAnswerTwo);
                 QuizBuilder.LoadQuestion(labelQuestionNum, textBoxQuestion, buttonAnswerOne, buttonAnswerTwo, buttonAnswerThree, buttonAnswerFour);
+                InitialiseTimer();
             }
             else
             {
@@ -70,6 +80,7 @@ namespace QuizzApp
             {
                 QuizBuilder.CheckAnswer(buttonAnswerThree);
                 QuizBuilder.LoadQuestion(labelQuestionNum, textBoxQuestion, buttonAnswerOne, buttonAnswerTwo, buttonAnswerThree, buttonAnswerFour);
+                InitialiseTimer();
             }
             else
             {
@@ -89,6 +100,7 @@ namespace QuizzApp
             {
                 QuizBuilder.CheckAnswer(buttonAnswerFour);
                 QuizBuilder.LoadQuestion(labelQuestionNum, textBoxQuestion, buttonAnswerOne, buttonAnswerTwo, buttonAnswerThree, buttonAnswerFour);
+                InitialiseTimer();
             }
             else
             {
@@ -98,7 +110,32 @@ namespace QuizzApp
                 QuizBuilder.correctCount = 0;
                 this.Visible = false;
             }
+        }
 
+        private void questionTimer_Tick(object sender, EventArgs e)
+        {
+            if (int.Parse(timerLabel.Text) != 0) 
+            {
+                int nextValue = int.Parse(timerLabel.Text) - 1; //For every tick, remove 1 from the timer
+                timerLabel.Text = nextValue.ToString(); //Update the label with the new countdown
+            }
+            else 
+            {
+                if (QuizBuilder.QuestionNumber != 5) 
+                {
+                    QuizBuilder.SkipQuestion(); //We dont want to check for any answers since the time ran out, so we skip
+                    QuizBuilder.LoadQuestion(labelQuestionNum, textBoxQuestion, buttonAnswerOne, buttonAnswerTwo, buttonAnswerThree, buttonAnswerFour);
+                    InitialiseTimer(); //Load next question and reset the timer
+                }
+                else 
+                {
+                    QuizBuilder.SkipQuestion();
+                    QuizBuilder.QuestionNumber = 1;
+                    DialogResult DR = MessageBox.Show("Your score: " + QuizBuilder.correctCount + " out of 5.", "Results", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    QuizBuilder.correctCount = 0;
+                    this.Visible = false;
+                }
+            }
         }
     }
 }

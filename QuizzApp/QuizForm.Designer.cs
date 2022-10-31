@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.labelQuestionNum = new System.Windows.Forms.Label();
             this.buttonAnswerOne = new System.Windows.Forms.Button();
             this.buttonAnswerTwo = new System.Windows.Forms.Button();
@@ -35,6 +36,8 @@
             this.buttonAnswerFour = new System.Windows.Forms.Button();
             this.CloseButton = new System.Windows.Forms.Button();
             this.textBoxQuestion = new System.Windows.Forms.TextBox();
+            this.timerLabel = new System.Windows.Forms.Label();
+            this.questionTimer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // labelQuestionNum
@@ -105,11 +108,26 @@
             this.textBoxQuestion.Size = new System.Drawing.Size(591, 45);
             this.textBoxQuestion.TabIndex = 7;
             // 
+            // timerLabel
+            // 
+            this.timerLabel.AutoSize = true;
+            this.timerLabel.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.timerLabel.Location = new System.Drawing.Point(12, 401);
+            this.timerLabel.Name = "timerLabel";
+            this.timerLabel.Size = new System.Drawing.Size(0, 40);
+            this.timerLabel.TabIndex = 8;
+            // 
+            // questionTimer
+            // 
+            this.questionTimer.Interval = 1000;
+            this.questionTimer.Tick += new System.EventHandler(this.questionTimer_Tick);
+            // 
             // QuizForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(669, 450);
+            this.Controls.Add(this.timerLabel);
             this.Controls.Add(this.textBoxQuestion);
             this.Controls.Add(this.CloseButton);
             this.Controls.Add(this.buttonAnswerFour);
@@ -134,5 +152,7 @@
         private Button buttonAnswerFour;
         private Button CloseButton;
         private TextBox textBoxQuestion;
+        private Label timerLabel;
+        private System.Windows.Forms.Timer questionTimer;
     }
 }

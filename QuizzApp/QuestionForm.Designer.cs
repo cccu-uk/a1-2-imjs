@@ -32,7 +32,6 @@
             this.filmsButton = new System.Windows.Forms.Button();
             this.musicButton = new System.Windows.Forms.Button();
             this.animalsButton = new System.Windows.Forms.Button();
-            this.outputBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // generalButton
@@ -40,7 +39,7 @@
             this.generalButton.Location = new System.Drawing.Point(10, 8);
             this.generalButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.generalButton.Name = "generalButton";
-            this.generalButton.Size = new System.Drawing.Size(104, 46);
+            this.generalButton.Size = new System.Drawing.Size(202, 119);
             this.generalButton.TabIndex = 0;
             this.generalButton.Text = "General";
             this.generalButton.UseVisualStyleBackColor = true;
@@ -48,10 +47,10 @@
             // 
             // filmsButton
             // 
-            this.filmsButton.Location = new System.Drawing.Point(10, 65);
+            this.filmsButton.Location = new System.Drawing.Point(10, 133);
             this.filmsButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.filmsButton.Name = "filmsButton";
-            this.filmsButton.Size = new System.Drawing.Size(104, 46);
+            this.filmsButton.Size = new System.Drawing.Size(202, 119);
             this.filmsButton.TabIndex = 1;
             this.filmsButton.Text = "Films";
             this.filmsButton.UseVisualStyleBackColor = true;
@@ -59,10 +58,10 @@
             // 
             // musicButton
             // 
-            this.musicButton.Location = new System.Drawing.Point(130, 9);
+            this.musicButton.Location = new System.Drawing.Point(218, 8);
             this.musicButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.musicButton.Name = "musicButton";
-            this.musicButton.Size = new System.Drawing.Size(104, 46);
+            this.musicButton.Size = new System.Drawing.Size(202, 119);
             this.musicButton.TabIndex = 2;
             this.musicButton.Text = "Music";
             this.musicButton.UseVisualStyleBackColor = true;
@@ -70,30 +69,20 @@
             // 
             // animalsButton
             // 
-            this.animalsButton.Location = new System.Drawing.Point(130, 65);
+            this.animalsButton.Location = new System.Drawing.Point(218, 133);
             this.animalsButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.animalsButton.Name = "animalsButton";
-            this.animalsButton.Size = new System.Drawing.Size(104, 46);
+            this.animalsButton.Size = new System.Drawing.Size(200, 121);
             this.animalsButton.TabIndex = 3;
             this.animalsButton.Text = "Animals";
             this.animalsButton.UseVisualStyleBackColor = true;
             this.animalsButton.Click += new System.EventHandler(this.animalsButton_Click);
             // 
-            // outputBox
-            // 
-            this.outputBox.Location = new System.Drawing.Point(15, 126);
-            this.outputBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.outputBox.Multiline = true;
-            this.outputBox.Name = "outputBox";
-            this.outputBox.Size = new System.Drawing.Size(219, 118);
-            this.outputBox.TabIndex = 4;
-            // 
             // QuestionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(700, 338);
-            this.Controls.Add(this.outputBox);
+            this.ClientSize = new System.Drawing.Size(439, 263);
             this.Controls.Add(this.animalsButton);
             this.Controls.Add(this.musicButton);
             this.Controls.Add(this.filmsButton);
@@ -103,7 +92,6 @@
             this.Name = "QuestionForm";
             this.Text = "QuestionForm";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -113,6 +101,5 @@
         private Button filmsButton;
         private Button musicButton;
         private Button animalsButton;
-        private TextBox outputBox;
     }
 }
