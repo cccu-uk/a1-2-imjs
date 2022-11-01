@@ -12,7 +12,8 @@ namespace QuizzApp
 {
     public partial class QuizForm : Form
     {
-        QuestionForm QuestionForm = new QuestionForm();
+        
+        QuestionForm Questionform = new QuestionForm();
         public QuizForm()
         {
             InitializeComponent();
@@ -21,7 +22,8 @@ namespace QuizzApp
 
         private void InitialiseTimer() //This must be called in order to start OR reset the timer
         {
-            timerLabel.Text = "10";
+
+            timerLabel.Text = Program.Timerduration;
             questionTimer.Interval = 1000; //1 Second
             questionTimer.Start();
         }

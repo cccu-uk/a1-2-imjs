@@ -38,6 +38,11 @@ namespace QuizzApp
             bool loop = true;
             bool AddQuestion = false;
 
+            musicButton.Visible = false;
+            generalButton.Visible = false;
+            filmsButton.Visible = false;
+            animalsButton.Visible = false;
+
             for (int i = 0; i < 5; i++)
             {
                 QB = new QuestionBuilder("General");
@@ -83,6 +88,11 @@ namespace QuizzApp
             bool loop = true;
             bool AddQuestion = false;
 
+            musicButton.Visible = false;
+            generalButton.Visible = false;
+            filmsButton.Visible = false;
+            animalsButton.Visible = false;
+
             for (int i = 0; i < 5; i++)
             {
                 QB = new QuestionBuilder("Music");
@@ -126,6 +136,11 @@ namespace QuizzApp
             List<QuestionBuilder> QL = new List<QuestionBuilder>();
             bool loop = true;
             bool AddQuestion = false;
+
+            musicButton.Visible = false;
+            generalButton.Visible = false;
+            filmsButton.Visible = false;
+            animalsButton.Visible = false;
 
             for (int i = 0; i < 5; i++)
             {
@@ -171,6 +186,11 @@ namespace QuizzApp
             bool loop = true;
             bool AddQuestion = false;
 
+            musicButton.Visible = false;
+            generalButton.Visible = false;
+            filmsButton.Visible = false;
+            animalsButton.Visible = false;
+
             for (int i = 0; i < 5; i++)
             {
                 QB = new QuestionBuilder("Animals");
@@ -209,5 +229,40 @@ namespace QuizzApp
             QuizBuilder.LoadQuestionForm(QL);
         }
 
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Program.Timerduration = "20";
+            musicButton.Visible = true;
+            generalButton.Visible = true;
+            filmsButton.Visible = true;
+            animalsButton.Visible = true;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Program.Timerduration = "10";
+            musicButton.Visible = true;
+            generalButton.Visible = true;
+            filmsButton.Visible = true;
+            animalsButton.Visible = true;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Program.Timerduration = "2";
+            musicButton.Visible = true;
+            generalButton.Visible = true;
+            filmsButton.Visible = true;
+            animalsButton.Visible = true;
+        }
+
+        private void QuestionForm_Load(object sender, EventArgs e)
+        {
+            musicButton.Visible = false;
+            generalButton.Visible = false;
+            filmsButton.Visible = false;
+            animalsButton.Visible = false;
+        }
     }
 }
