@@ -4,6 +4,8 @@ namespace QuizzApp
     {
         public static string Timerduration { get; set; }
 
+        public static int HighScore = 0;
+
         /// <summary>
         ///  The main entry point for the application.
         /// </summary>
@@ -17,6 +19,7 @@ namespace QuizzApp
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             Application.Run(new Main());
+
         }
     }
 }

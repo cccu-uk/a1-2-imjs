@@ -256,13 +256,13 @@ namespace QuizzApp
             filmsButton.Visible = true;
             animalsButton.Visible = true;
         }
-
         private void QuestionForm_Load(object sender, EventArgs e)
         {
             musicButton.Visible = false;
             generalButton.Visible = false;
             filmsButton.Visible = false;
             animalsButton.Visible = false;
+            
         }
     }
 }

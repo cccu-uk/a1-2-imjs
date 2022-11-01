@@ -51,6 +51,8 @@ namespace QuizzApp
                 QuizBuilder.CheckAnswer(buttonAnswerOne);
                 QuizBuilder.QuestionNumber = 1;
                 DialogResult DR = MessageBox.Show("Your score: " + QuizBuilder.correctCount + " out of 5.", "Results", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                if (QuizBuilder.correctCount > Program.HighScore) { Program.HighScore = QuizBuilder.correctCount; }
+                MessageBox.Show("Current HighScore is - " + Program.HighScore);
                 QuizBuilder.correctCount = 0;
                 this.Visible = false;
             }
@@ -70,6 +72,8 @@ namespace QuizzApp
                 QuizBuilder.CheckAnswer(buttonAnswerTwo);
                 QuizBuilder.QuestionNumber = 1;
                 DialogResult DR = MessageBox.Show("Your score: " + QuizBuilder.correctCount + " out of 5.", "Results", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                if (QuizBuilder.correctCount > Program.HighScore) { Program.HighScore = QuizBuilder.correctCount; }
+                MessageBox.Show("Current HighScore is - " + Program.HighScore);
                 QuizBuilder.correctCount = 0;
                 this.Visible = false;
             }
@@ -89,6 +93,8 @@ namespace QuizzApp
                 QuizBuilder.CheckAnswer(buttonAnswerThree);
                 QuizBuilder.QuestionNumber = 1;
                 DialogResult DR = MessageBox.Show("Your score: " + QuizBuilder.correctCount + " out of 5.", "Results", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                if (QuizBuilder.correctCount > Program.HighScore) { Program.HighScore = QuizBuilder.correctCount; }
+                MessageBox.Show("Current HighScore is - " + Program.HighScore);
                 QuizBuilder.correctCount = 0;
                 this.Visible = false;
 
@@ -109,6 +115,8 @@ namespace QuizzApp
                 QuizBuilder.CheckAnswer(buttonAnswerFour);
                 QuizBuilder.QuestionNumber = 1;                
                 DialogResult DR = MessageBox.Show("Your score: " + QuizBuilder.correctCount + " out of 5.", "Results", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                if (QuizBuilder.correctCount > Program.HighScore) { Program.HighScore = QuizBuilder.correctCount; }
+                MessageBox.Show("Current HighScore is - " + Program.HighScore);
                 QuizBuilder.correctCount = 0;
                 this.Visible = false;
             }
@@ -134,6 +142,8 @@ namespace QuizzApp
                     QuizBuilder.SkipQuestion();
                     QuizBuilder.QuestionNumber = 1;
                     DialogResult DR = MessageBox.Show("Your score: " + QuizBuilder.correctCount + " out of 5.", "Results", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    if (QuizBuilder.correctCount > Program.HighScore) { Program.HighScore = QuizBuilder.correctCount; }
+                    MessageBox.Show("Current HighScore is - " + Program.HighScore);
                     QuizBuilder.correctCount = 0;
                     this.Visible = false;
                 }
